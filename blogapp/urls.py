@@ -1,9 +1,7 @@
-from django import views
-from django.contrib import admin
-from django.urls import path,include
 from . import views
+from django.urls import path
 
-urlpatterns=[
-    path('',views.PostList.as_view(),name='Home'),
-    path('<slug:slug>/',views.PostList.as_view(),name='post_detail'),
+urlpatterns = [
+    path('', views.PostList.as_view(), name='home'),
+    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 ]
