@@ -10,18 +10,20 @@
     {% csrf_token %}
     {{ login_form|crispy }}
     <button class="btn btn-primary" type="submit">Login</button>
+    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
   </form>
-  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
 </div>
 
 {% endblock %}}
 
+
 <!-- 
+
 <div class="form-wrap">
   <div class="tabs">
     <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
     <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
-  </div><!--.tabs--
+  </div>
 
   <div class="tabs-content">
     <div id="signup-tab-content" class="active">
@@ -32,12 +34,12 @@
         <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
         <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
         <input type="submit" class="button" value="Sign Up">
-      </form><!--.login-form--
+      </form>
       <div class="help-text">
         <p>By signing up, you agree to our</p>
         <p><a href="#">Terms of service</a></p>
-      </div><!--.help-text--
-    </div><!--.signup-tab-content--
+      </div>
+    </div>
 
     <div id="login-tab-content">
       <form class="login-form" action="" method="post">
@@ -49,14 +51,13 @@
         <label for="remember_me">Remember me</label>
 
         <input type="submit" class="button" value="Login">
-      </form><!--.login-form--
+      </form>
       <div class="help-text">
         <p><a href="#">Forget your password?</a></p>
-      </div><!--.help-text--
-    </div><!--.login-tab-content--
-  </div><!--.tabs-content-->
-<!-- </div>.form-wrap -->
-
+      </div>
+    </div>
+  </div>
+</div> -->
 
 <!-- @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
 * {

@@ -17,14 +17,5 @@ class Post(models.Model):
 
     class Meta:
         ordering=['-created_on']
-#         permissions=(
-#             ("can_add_data","can add a new data"),
-#         )
-# if request.user.has_perm('blogapp.can_add_data'):
-#     model= Post
-#     template_name=("http://127.0.0.1:8000/admin/blogapp/post/add/")
-# else:
-#     model=Post
-#     template_name=("http://127.0.0.1:8000/")
 def __str__(self):
         return self.title

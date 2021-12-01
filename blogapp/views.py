@@ -1,6 +1,5 @@
 from django.views import generic
 from .models import Post
-
 from django.shortcuts import  render, redirect
 from .forms import NewUserForm
 from django.contrib.auth import login
@@ -8,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm 
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import permission_required
-# from django.http import HttpResponse
+
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -17,11 +16,6 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-
-# @permission_required('blogapp.can_add_data')
-# def my_view(request):
-#     # do something
-#     return HttpResponse("response")
 
 def register_request(request):
 	if request.method == "POST":
